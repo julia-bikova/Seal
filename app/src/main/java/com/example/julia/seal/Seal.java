@@ -13,6 +13,12 @@ public class Seal extends ActionBarActivity {
     MediaPlayer mySound;
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        mySound.release();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seal);
